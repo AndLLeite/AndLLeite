@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.bod{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 6fr 0.5fr;
+    grid-template-rows: 0.5fr 4fr 4fr 1fr 1fr;
+    grid-template-areas: 
+    "sidebar headercorpo headercorpo"
+    "sidebar corpopag divladodir"
+    "sidebar corpopag divladodir"
+    "sidebar corpopag divladodir"
+    "footer footer footer";
+}
+.grid{
+    height:auto;
+    width:auto;
+    color:black; 
+}
+.grid1{
+    grid-area: headercorpo;
+}
+.grid2{
+    display: grid;
+    align-items: center;
+    grid-area: corpopag;
+
+}
+.grid3{
+    grid-area: divladodir;
+   
+}
+.grid4{
+    grid-area:sidebar;
+}
+.grid5{
+    grid-area: footer;
+    background-image: linear-gradient(rgba(239, 239, 239, 0),rgb(17, 12, 12)100px);
+}
+
+/* Conteúdo */
+.vid{
+    position: fixed;
+    background-size: cover;
+    z-index: -99;
+}
+.videoaula{
+    position:fixed;
+    z-index: -99;
+    background-size: cover;
+}
+a{
+    color:white;
+    
+}
+.logoD{
+    position:relative;
+    left: 35%;
+    TOP: 120PX;;
+    z-index: 3;
+    width:min(20vw,200px);
+    opacity: 0.5;
+}
+
+
+/* Textos CORPO */
+h1{
+   position: relative;
+   margin: 5%;
+   right: 25px; 
+   color: white;
+   opacity: 0.5;
+   text-align: center; 
+   font-size: max(3.5vw,50px);
+}
+
+.aga2{
+   display:inline-block; 
+   position: relative;
+   bottom: 5%;
+   color: white;
+   opacity: 0.5;
+   text-align: center;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: max(2.5vw, 30px);
+}
+.texto1{
+    margin-top: 300px;
+    font-size: 190%;
+}       
+.text2{
+    font-size: 160%;
+} 
+.map{
+    display: flex;
+    position: absolute;
+    bottom:10%;
+    left: 18%;
+    width: max(260px, 65%);
+    
+}
+
+/* itens do grid nav */
+/* NAv face, insta, whitasapp */
+.netlink{
+    display:flex;
+    flex-grow: 5;
+    justify-content: center;
+    position: absolute;
+    width: 10%;
+    left:20%;
+    top:20px;
+}
+#netlinkicone{
+    padding: 10%;
+}
+#netlinkicone:hover{
+    transform: scale(1.2,1.2);
+}
+
+.falecom a{
+    position:absolute;
+    display:flex;
+    color:white;
+    background: #d92525;
+    background-image: none;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    padding:1.5%;
+    right:2%;
+    top:1%;
+}
+.falecom a:hover{
+   transform: scale(1.1,1.1);
+}
+
+.foot{
+   color: white;
+   position:relative;
+   top: 70%;
+   text-align: center;  
+}
+
+/* MEDIAS QUERIES */
+
+
+
+/* PARA aparecer o display do ícones W I f abaixo
+    de 600px apenas */
+
+@media screen and (min-width: 601px ) {
+    .netfooter #netlinkfooter{
+        display: none;
+    }
+    
+}
+
+
+/* para telas com até 1024px */
+@media only screen and (max-width: 1024px) {
+    .logoD{
+        position:relative;
+        left: 35%;
+        z-index: 3;
+        width:min(20vw,200px);
+    }    
+h1{
+   position: relative;
+   top:2%;
+   right: 2px; 
+   text-align: center;
+ }
+    #netfooter{
+        display: none;
+    }
+}
+
+
+/* PARA SMARTPOHNE */
+
+@media only screen and (max-width: 844px) {
+    .logoD{
+        position:relative;
+        left: 28%;
+        z-index: 3;
+        width:min(27vw,250px);
+    }  
+    .netlink{
+        position: absolute;
+        width: 10%;
+        left:80%;
+        top:20px;
+    }
+    #netfooter{
+        display: none;
+    }
+.falecom{
+        display: none;
+    }
+
+} 
+
+/* Só para menos de 600PX  */
+@media only screen and (max-width: 650px) {
+    .logoD{
+        position:relative;
+        left: 22%;
+        top:100px;
+        z-index: 3;
+        width:min(40vw,300px);
+    }  
+
+    .falecom{
+        display: none;
+    }
+    .netlink{
+        display:none;
+    }
+                /* ICONES NO FOOTER*/
+footer{
+    position: relative;
+}
+.grid1{
+    height:100%;
+}
+
+#netlinkfooter{
+    position: relative;
+    left: 38%;
+    top: 120px;
+
+}
+#netlinkfooter:hover{
+    transform: scale(1.2,1.2);
+}
+h1{ 
+    position:absolute;
+    font-size:2.5rem;
+    top: 155px;
+    }
+
+
+/* PARA ACERTAR TEXTO */
+
+@media only screen and (max-width: 400px){
+    .logoD{ 
+        position:relative;
+        left: 20%;
+        top: 90px;
+        z-index: 3;
+        width:min(45vw,300px);
+    }  
+    h1{ 
+        font-size:2.5rem;
+        }
+    }
+    .texto1{
+            margin-bottom: 200%;
+            font-size: 190%;
+        }
+        
+}

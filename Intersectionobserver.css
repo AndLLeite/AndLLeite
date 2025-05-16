@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding:0;
+}
+
+/* sections */
+/* utilizando o IntersectionObserve, forEach e observe no JS */
+.sec1, .sec2, .sec3{
+    display:flex;
+    height: 750px;
+    flex-direction: column;
+    margin: 50px 20px 0 2%;
+    justify-content:center;
+   
+}
+
+.hidden{
+    opacity:0;
+    transition:all 3s;
+    transform: translateX(-70%);
+}
+/* esta classe "show" nao está mp HTML, mas sim no JS */
+.show{
+    opacity: 1;
+    filter:blur(0);
+    transition:all 3s;
+    transform: translateX(0);
+}
+
+/* LOGOS */
+.aulas{
+    width: 200px;
+}
+.infantil{
+    width: 230px;
+}
+.luteria{
+    width: 150px;;
+}
